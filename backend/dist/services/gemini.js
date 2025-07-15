@@ -18,7 +18,6 @@ const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const MODEL_NAME = 'gemini-2.5-flash';
 const genAI = new generative_ai_1.GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
-console.log("this is env" + process.env.GEMINI_API_KEY);
 function generatePromptWithGemini(input) {
     return __awaiter(this, void 0, void 0, function* () {
         const model = genAI.getGenerativeModel({ model: MODEL_NAME });
