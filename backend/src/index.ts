@@ -7,7 +7,7 @@ import router from './routes/prompt';
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://vibewrite-h088pvlao-pavans-projects-99b76134.vercel.app/',
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
 }));

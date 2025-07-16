@@ -47,7 +47,7 @@ export default function PromptBuilder() {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/generate', {
+      const response = await axios.post('https://vibewrite-production.up.railway.app/', {
         idea,
         uiType,
         theme,
@@ -164,16 +164,19 @@ export default function PromptBuilder() {
       </div>
     </AccordionItem>
 </Accordion>
-<hr />
 {prompts.length > 0 && (
+<div>
+<hr className='p-4'/>
+
   
   <div className='text-lg font-semibold text-center'>Generated prompt</div>
+</div>
 )}
 
         {Array.isArray(prompts) && prompts.length > 0 && (
           <div>
         
-          <div className="p-4 border-b">
+          <div className="p-4">
             <h4 className="font-semibold">Prompt</h4>
             <p>{prompts}</p>
           </div>
