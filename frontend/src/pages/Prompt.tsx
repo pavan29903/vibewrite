@@ -47,7 +47,7 @@ export default function PromptBuilder() {
     }
 
     try {
-      const response = await axios.post('https://vibewrite-production.up.railway.app/', {
+      const response = await axios.post('https://vibewrite-production.up.railway.app/generate', {
         idea,
         uiType,
         theme,
