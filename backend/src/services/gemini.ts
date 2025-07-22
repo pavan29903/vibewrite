@@ -18,15 +18,18 @@ export default async function generatePromptWithGemini(input: PromptRequest): Pr
   
     const model = genAI.getGenerativeModel({ model: MODEL_NAME });
     const prompt =` You are a prompt engineer for AI app builder tools like Bolt or Lovable. based on given details generate a detailed prompt for the AI app builder tool to generate a full app with all the pages and features.
-
 Here are the details for you to generate the prompt:
 Details:
 - the primary App idea: ${input.idea} that i'm trying to build
 - with UI preference: ${input.uiType} 
 - and Pages structure would be ${input.pages.map(page => `Page: ${page.name}, Subheading: ${page.subheading}`).join(', ')}
 - and i preffer Theme: ${input.theme}
-- and you should generate the detailed prompt of Length: ${input.length}
+- and you should generate the detailed prompt Length of ${input.length} words.
+on the bases of above data just give me only detailed prompt without any additonal data
 `;
+
+
+
 
 
   const result = await model.generateContent(prompt);
