@@ -1,6 +1,6 @@
-# vibewrite
+# Vibewrite
 
-PromptGen is a MERN-stack based application that helps users generate **efficient prompts** for AI app builder platforms like **Bolt**, **Lovable**, **cursor** or **ChatGPT** based on their app idea, UI preferences, and structure.
+Vibewrite is a MERN-stack based application that helps users generate **efficient prompts** for AI app builder platforms like **Bolt**, **Lovable**, **cursor** or **ChatGPT** based on their app idea, UI preferences, and structure.
 
 ## Features
 
@@ -37,7 +37,7 @@ cd vibewrite
 ```
 
 ### 2. Install Dependencies
-
+PromptGen
 #### backend
 
 ```bash
